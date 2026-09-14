@@ -27,7 +27,7 @@ body {
     sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 80% -10%, #253264 0, transparent 40%), var(--bg);
+    radial-gradient(circle at 80% -10%, #642548 0, transparent 40%), var(--bg);
 }
 button,
 input {
