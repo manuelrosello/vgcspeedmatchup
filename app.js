@@ -56,6 +56,42 @@
     state.pokemon.find(
       (p) => p.name.toLowerCase() === name.trim().toLowerCase(),
     );
+  const isMegaName = (name) => /-Mega(?:-[^-]+)?$/i.test(name);
+  const nonMegaName = (name) => name.replace(/-Mega(?:-[^-]+)?$/i, "");
+  const effectivePokemon = (mon) => {
+    const selected = findPokemon(mon.name);
+    if (!selected || !isMegaName(selected.name) || mon.mega !== false)
+      return selected;
+    return findPokemon(nonMegaName(selected.name)) || selected;
+  };
+  const modifierLabel = (value) =>
+    ({
+      4: "+6",
+      3.5: "+5",
+      3: "+4",
+      2.5: "+3",
+      2: "+2",
+      1.5: "+1",
+      1: "--",
+      0.6666666667: "-1",
+      0.5: "-2",
+      0.4: "-3",
+      0.3333333333: "-4",
+      0.2857142857: "-5",
+      0.25: "-6",
+    })[String(value)] || "--";
+  const abilityLabel = (value) =>
+    ({ 2: "x2", 1.5: "x1.5", 0.5: "x0.5", 1: "--" })[String(value)] || "--";
+  const modifierChainLabel = (mon, tailwind) => {
+    const parts = [];
+    if (mon.scarf) parts.push("Scarf");
+    if (Number(mon.modifier || 1) !== 1)
+      parts.push(modifierLabel(Number(mon.modifier)));
+    if (Number(mon.abilityMultiplier || 1) !== 1)
+      parts.push(`Ability ${abilityLabel(Number(mon.abilityMultiplier))}`);
+    if (tailwind) parts.push("Tailwind");
+    return parts.length ? parts.join(" · ") : "No modifiers";
+  };
   const iconUrl = (formeId) => `img/icons/${encodeURIComponent(formeId)}.png`;
   const iconMarkup = (formeId, name) =>
     formeId
@@ -101,8 +137,17 @@
       .join("");
 
   const slotDisabled = (mon) => (mon.selected ? "" : "disabled");
+  const slotIcon = (mon) => {
+    const data = effectivePokemon(mon);
+    return `<div class="slot-icon">${data ? iconMarkup(data.formeId, data.name) : ""}</div>`;
+  };
+  const megaToggle = (mon, i, side) => {
+    if (!findPokemon(mon.name) || !isMegaName(mon.name)) return "";
+    return `<button class="mega-option mega-check" type="button" aria-label="Use Mega form for ${side === "user" ? "your" : "opposing"} Pokémon ${i + 1}" aria-pressed="${mon.mega !== false ? "true" : "false"}" data-side="${side}" data-index="${i}" title="Mega" ${slotDisabled(mon)}><img src="img/items/Mega.webp" alt="Mega"></button>`;
+  };
   const modifierControls = (mon, i, side) => `
         <div class="slot-secondary">
+          ${slotIcon(mon)}
           <button class="scarf-option scarf-check ${side}-scarf" type="button" aria-label="Choice Scarf for ${side === "user" ? "your" : "opposing"} Pokémon ${i + 1}" aria-pressed="${mon.scarf ? "true" : "false"}" data-index="${i}" title="Choice Scarf" ${slotDisabled(mon)}><img src="img/items/Choice_Scarf.webp" alt="Choice Scarf"></button>
           <label class="select-control">Modifiers<select class="modifier-input" aria-label="${side} Pokémon ${i + 1} modifier" data-side="${side}" data-index="${i}" ${slotDisabled(mon)}>${modifierOptions(mon.modifier)}</select></label>
           <label class="select-control">Ability Effects<select class="ability-input" aria-label="${side} Pokémon ${i + 1} ability effect" data-side="${side}" data-index="${i}" ${slotDisabled(mon)}>${abilityOptions(mon.abilityMultiplier)}</select></label>
@@ -115,10 +160,11 @@
         (mon, i) => `
       <div class="slot user-slot ${mon.selected ? "" : "inactive"}">
         <div class="slot-primary">
-          <div class="active-check" title="Include this Pokémon in the ranking"><input class="user-active" type="checkbox" aria-label="Include your Pokémon ${i + 1}" data-index="${i}" ${mon.selected ? "checked" : ""}><span></span></div>
+          <div class="active-check" title="Include this Pokémon in the ranking"><input class="user-active" type="checkbox" aria-label="Include your Pokémon ${i + 1}" data-index="${i}" ${mon.selected ? "checked" : ""}></div>
           <div class="search-wrap"><input class="search-input user-search" type="text" autocomplete="off" placeholder="Search Pokémon…" aria-label="Your Pokémon ${i + 1}" data-index="${i}" value="${escapeHtml(mon.name)}" ${slotDisabled(mon)}><div class="suggestions" data-suggestions="user-${i}"></div></div>
           <input class="ev-input" type="number" min="0" step="1" placeholder="EV" aria-label="Your Pokémon ${i + 1} EV" data-index="${i}" value="${mon.ev}" ${slotDisabled(mon)}>
           <select class="alignment-input" aria-label="Your Pokémon ${i + 1} alignment" data-index="${i}" ${slotDisabled(mon)}>${alignmentOptions(mon.alignment)}</select>
+          ${megaToggle(mon, i, "user")}
         </div>
         ${modifierControls(mon, i, "user")}
       </div>`,
@@ -131,7 +177,7 @@
         (mon, i) => `
       <div class="slot opponent-slot ${mon.selected ? "" : "inactive"}">
         <div class="slot-primary">
-          <div class="active-check" title="Include this Pokémon in the ranking"><input class="opponent-active" type="checkbox" aria-label="Include opposing Pokémon ${i + 1}" data-index="${i}" ${mon.selected ? "checked" : ""}><span></span></div>
+          <div class="active-check" title="Include this Pokémon in the ranking"><input class="opponent-active" type="checkbox" aria-label="Include opposing Pokémon ${i + 1}" data-index="${i}" ${mon.selected ? "checked" : ""}></div>
           <div class="search-wrap"><input class="search-input opponent-search" type="text" autocomplete="off" placeholder="Search Pokémon…" aria-label="Opposing Pokémon ${i + 1}" data-index="${i}" value="${escapeHtml(mon.name)}" ${slotDisabled(mon)}><div class="suggestions" data-suggestions="opponent-${i}"></div></div>
           <div class="confirm-options" aria-label="Confirmed opposing speed scenario">
             ${[
@@ -146,6 +192,7 @@
               )
               .join("")}
           </div>
+          ${megaToggle(mon, i, "opponent")}
         </div>
         ${modifierControls(mon, i, "opponent")}
       </div>`,
@@ -182,7 +229,7 @@
   function renderRanking() {
     const entries = [];
     state.user.forEach((mon, i) => {
-      const data = findPokemon(mon.name);
+      const data = effectivePokemon(mon);
       if (!data || !mon.selected || mon.ev === "") return;
       const speed = applySpeedModifiers(
         calculateBaseSpeed(data.base, mon.ev, mon.alignment),
@@ -194,13 +241,13 @@
         data.name,
         speed,
         "user",
-        `${mon.ev} EV · ${alignmentLabel(mon.alignment)}`,
+        `${mon.ev} EV · ${alignmentLabel(mon.alignment)} · ${modifierChainLabel(mon, state.userTailwind)}`,
         data.base,
         data.formeId,
       );
     });
     state.opponents.forEach((mon) => {
-      const data = findPokemon(mon.name);
+      const data = effectivePokemon(mon);
       if (!data || !mon.selected) return;
       const scenarios = {
         "0-": [0, 0.9],
@@ -220,7 +267,7 @@
             state.opponentTailwind,
           ),
           "opponent",
-          `${label} EV${label.endsWith("+") ? " · positive" : label.endsWith("-") ? " · negative" : " · neutral"}`,
+          `${label} EV${label.endsWith("+") ? " · positive" : label.endsWith("-") ? " · negative" : " · neutral"} · ${modifierChainLabel(mon, state.opponentTailwind)}`,
           data.base,
           data.formeId,
         );
@@ -246,6 +293,7 @@
   }
   function setSearchValue(side, index, value) {
     state[side][index].name = value;
+    if (isMegaName(value)) state[side][index].mega = true;
   }
 
   document.addEventListener("input", (event) => {
@@ -303,6 +351,21 @@
     }
   });
   document.addEventListener("click", (event) => {
+    const megaToggle = event.target.closest(".mega-check");
+    if (megaToggle) {
+      const team =
+        megaToggle.dataset.side === "user" ? state.user : state.opponents;
+      team[megaToggle.dataset.index].mega =
+        team[megaToggle.dataset.index].mega === false;
+      megaToggle.setAttribute(
+        "aria-pressed",
+        team[megaToggle.dataset.index].mega ? "true" : "false",
+      );
+      renderRanking();
+      renderUserSlots();
+      renderOpponentSlots();
+      return;
+    }
     const scarfToggle = event.target.closest(".scarf-check");
     if (scarfToggle) {
       const team = scarfToggle.classList.contains("user-scarf")
@@ -395,7 +458,7 @@
       );
       $("data-status").textContent = `${state.pokemon.length} Pokémon loaded`;
       $("data-status").className = "status ready";
-      renderRanking();
+      update();
     })
     .catch(() => {
       $("data-status").textContent =

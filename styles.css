@@ -209,10 +209,10 @@ h2 {
 }
 .user-slot {
   --slot-columns: 26px minmax(180px, 1.5fr) minmax(62px, 0.38fr)
-    minmax(96px, 0.5fr);
+    minmax(96px, 0.5fr) auto;
 }
 .opponent-slot {
-  --slot-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr);
+  --slot-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr) auto;
 }
 .slot-primary,
 .slot-secondary {
@@ -222,15 +222,18 @@ h2 {
   gap: 9px;
 }
 .slot-secondary {
-  grid-template-columns: 34px minmax(0, 1fr) minmax(0, 1fr) auto;
-  padding-left: 35px;
+  grid-template-columns: 26px 34px minmax(0, 1fr) minmax(0, 1fr) auto;
+  padding-left: 0;
 }
 .slot.inactive {
   opacity: 0.48;
 }
 .active-check {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 2px;
 }
 .active-check input {
   width: 17px;
@@ -241,6 +244,17 @@ h2 {
 }
 .active-check span {
   display: none;
+}
+.slot-icon {
+  width: 26px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slot-icon .mon-icon {
+  width: 24px;
+  height: 24px;
 }
 .slot-number {
   color: var(--muted);
@@ -314,6 +328,37 @@ h2 {
 }
 .select-control select {
   flex: 1;
+}
+.mega-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  width: 34px;
+  height: 32px;
+  padding: 7px 8px;
+  color: var(--muted);
+  background: #0f1528;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.mega-option:hover {
+  border-color: var(--accent);
+}
+.mega-option[aria-pressed="true"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: #26345f;
+}
+.mega-option img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.mega-option:disabled {
+  cursor: not-allowed;
 }
 .speed-input {
   appearance: textfield;
@@ -550,12 +595,11 @@ h2 {
     grid-template-columns: var(--slot-columns);
   }
   .slot-secondary {
-    padding-left: 27px;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    padding-left: 0;
+    grid-template-columns: 26px minmax(0, 1fr) minmax(0, 1fr) auto;
   }
   .slot-secondary .scarf-option {
-    grid-column: 1 / -1;
-    justify-content: start;
+    grid-column: auto;
   }
   .select-control {
     display: block;
