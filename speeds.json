@@ -4,18 +4,15 @@
     "pokemon": [
       {
         "name": "Absol-Mega-Z",
-        "formeId": "359-mz",
-        "isMeta": false
+        "formeId": "359-mz"
       },
       {
         "name": "Garchomp-Mega-Z",
-        "formeId": "445-mz",
-        "isMeta": false
+        "formeId": "445-mz"
       },
       {
         "name": "Lucario-Mega-Z",
-        "formeId": "448-mz",
-        "isMeta": false
+        "formeId": "448-mz"
       }
     ]
   },
@@ -24,13 +21,11 @@
     "pokemon": [
       {
         "name": "Alakazam-Mega",
-        "formeId": "065-m",
-        "isMeta": false
+        "formeId": "065-m"
       },
       {
         "name": "Aerodactyl-Mega",
-        "formeId": "142-m",
-        "isMeta": false
+        "formeId": "142-m"
       }
     ]
   },
@@ -39,13 +34,11 @@
     "pokemon": [
       {
         "name": "Beedrill-Mega",
-        "formeId": "015-m",
-        "isMeta": false
+        "formeId": "015-m"
       },
       {
         "name": "Sceptile-Mega",
-        "formeId": "254-m",
-        "isMeta": false
+        "formeId": "254-m"
       }
     ]
   },
@@ -54,13 +47,11 @@
     "pokemon": [
       {
         "name": "Greninja-Mega",
-        "formeId": "658-m",
-        "isMeta": false
+        "formeId": "658-m"
       },
       {
         "name": "Dragapult",
-        "formeId": "887",
-        "isMeta": false
+        "formeId": "887"
       }
     ]
   },
@@ -69,13 +60,11 @@
     "pokemon": [
       {
         "name": "Manectric-Mega",
-        "formeId": "310-m",
-        "isMeta": false
+        "formeId": "310-m"
       },
       {
         "name": "Lopunny-Mega",
-        "formeId": "428-m",
-        "isMeta": false
+        "formeId": "428-m"
       }
     ]
   },
@@ -84,8 +73,7 @@
     "pokemon": [
       {
         "name": "Delphox-Mega",
-        "formeId": "655-m",
-        "isMeta": false
+        "formeId": "655-m"
       }
     ]
   },
@@ -94,23 +82,19 @@
     "pokemon": [
       {
         "name": "Raichu-Mega-Y",
-        "formeId": "026-my",
-        "isMeta": false
+        "formeId": "026-my"
       },
       {
         "name": "Gengar-Mega",
-        "formeId": "094-m",
-        "isMeta": false
+        "formeId": "094-m"
       },
       {
         "name": "Jolteon",
-        "formeId": "135",
-        "isMeta": false
+        "formeId": "135"
       },
       {
         "name": "Aerodactyl",
-        "formeId": "142",
-        "isMeta": false
+        "formeId": "142"
       }
     ]
   },
@@ -119,13 +103,11 @@
     "pokemon": [
       {
         "name": "Pyroar-Mega",
-        "formeId": "668-m",
-        "isMeta": false
+        "formeId": "668-m"
       },
       {
         "name": "Talonflame",
-        "formeId": "663",
-        "isMeta": false
+        "formeId": "663"
       }
     ]
   },
@@ -134,8 +116,7 @@
     "pokemon": [
       {
         "name": "Weavile",
-        "formeId": "461",
-        "isMeta": false
+        "formeId": "461"
       }
     ]
   },
@@ -144,13 +125,11 @@
     "pokemon": [
       {
         "name": "Meowstic-F-Mega",
-        "formeId": "678-m",
-        "isMeta": false
+        "formeId": "678-m"
       },
       {
         "name": "Meowstic-M-Mega",
-        "formeId": "678-m",
-        "isMeta": false
+        "formeId": "678-m"
       }
     ]
   },
@@ -159,13 +138,11 @@
     "pokemon": [
       {
         "name": "Noivern",
-        "formeId": "715",
-        "isMeta": false
+        "formeId": "715"
       },
       {
         "name": "Meowscarada",
-        "formeId": "908",
-        "isMeta": false
+        "formeId": "908"
       }
     ]
   },
@@ -174,8 +151,7 @@
     "pokemon": [
       {
         "name": "Greninja",
-        "formeId": "658",
-        "isMeta": false
+        "formeId": "658"
       }
     ]
   },
@@ -184,8 +160,7 @@
     "pokemon": [
       {
         "name": "Pidgeot-Mega",
-        "formeId": "018-m",
-        "isMeta": false
+        "formeId": "018-m"
       }
     ]
   },
@@ -194,38 +169,31 @@
     "pokemon": [
       {
         "name": "Starmie-Mega",
-        "formeId": "121-m",
-        "isMeta": false
+        "formeId": "121-m"
       },
       {
         "name": "Salamence-Mega",
-        "formeId": "373-m",
-        "isMeta": false
+        "formeId": "373-m"
       },
       {
         "name": "Froslass-Mega",
-        "formeId": "478-m",
-        "isMeta": false
+        "formeId": "478-m"
       },
       {
         "name": "Alakazam",
-        "formeId": "065",
-        "isMeta": false
+        "formeId": "065"
       },
       {
         "name": "Sceptile",
-        "formeId": "254",
-        "isMeta": false
+        "formeId": "254"
       },
       {
         "name": "Inteleon",
-        "formeId": "818",
-        "isMeta": false
+        "formeId": "818"
       },
       {
         "name": "Sneasler",
-        "formeId": "903",
-        "isMeta": false
+        "formeId": "903"
       }
     ]
   },
@@ -234,8 +202,7 @@
     "pokemon": [
       {
         "name": "Cinderace",
-        "formeId": "815",
-        "isMeta": false
+        "formeId": "815"
       }
     ]
   },
@@ -244,13 +211,11 @@
     "pokemon": [
       {
         "name": "Hawlucha-Mega",
-        "formeId": "701-m",
-        "isMeta": false
+        "formeId": "701-m"
       },
       {
         "name": "Hawlucha",
-        "formeId": "701",
-        "isMeta": false
+        "formeId": "701"
       }
     ]
   },
@@ -259,8 +224,7 @@
     "pokemon": [
       {
         "name": "Salazzle",
-        "formeId": "758",
-        "isMeta": false
+        "formeId": "758"
       }
     ]
   },
@@ -269,8 +233,7 @@
     "pokemon": [
       {
         "name": "Whimsicott",
-        "formeId": "547",
-        "isMeta": false
+        "formeId": "547"
       }
     ]
   },
@@ -279,28 +242,23 @@
     "pokemon": [
       {
         "name": "Houndoom-Mega",
-        "formeId": "229-m",
-        "isMeta": false
+        "formeId": "229-m"
       },
       {
         "name": "Absol-Mega",
-        "formeId": "359-m",
-        "isMeta": false
+        "formeId": "359-m"
       },
       {
         "name": "Persian",
-        "formeId": "053",
-        "isMeta": false
+        "formeId": "053"
       },
       {
         "name": "Persian-Alola",
-        "formeId": "053-a",
-        "isMeta": false
+        "formeId": "053-a"
       },
       {
         "name": "Starmie",
-        "formeId": "121",
-        "isMeta": false
+        "formeId": "121"
       }
     ]
   },
@@ -309,8 +267,7 @@
     "pokemon": [
       {
         "name": "Serperior",
-        "formeId": "497",
-        "isMeta": false
+        "formeId": "497"
       }
     ]
   },
@@ -319,18 +276,15 @@
     "pokemon": [
       {
         "name": "Lucario-Mega",
-        "formeId": "448-m",
-        "isMeta": false
+        "formeId": "448-m"
       },
       {
         "name": "Scolipede",
-        "formeId": "545",
-        "isMeta": false
+        "formeId": "545"
       },
       {
         "name": "Lycanroc",
-        "formeId": "745",
-        "isMeta": false
+        "formeId": "745"
       }
     ]
   },
@@ -339,8 +293,7 @@
     "pokemon": [
       {
         "name": "Maushold",
-        "formeId": "925",
-        "isMeta": false
+        "formeId": "925"
       }
     ]
   },
@@ -349,68 +302,55 @@
     "pokemon": [
       {
         "name": "Raichu-Mega-X",
-        "formeId": "026-mx",
-        "isMeta": false
+        "formeId": "026-mx"
       },
       {
         "name": "Skarmory-Mega",
-        "formeId": "227-m",
-        "isMeta": false
+        "formeId": "227-m"
       },
       {
         "name": "Metagross-Mega",
-        "formeId": "376-m",
-        "isMeta": false
+        "formeId": "376-m"
       },
       {
         "name": "Staraptor-Mega",
-        "formeId": "398-m",
-        "isMeta": false
+        "formeId": "398-m"
       },
       {
         "name": "Gallade-Mega",
-        "formeId": "475-m",
-        "isMeta": false
+        "formeId": "475-m"
       },
       {
         "name": "Raichu",
-        "formeId": "026",
-        "isMeta": false
+        "formeId": "026"
       },
       {
         "name": "Raichu-Alola",
-        "formeId": "026-a",
-        "isMeta": false
+        "formeId": "026-a"
       },
       {
         "name": "Gengar",
-        "formeId": "094",
-        "isMeta": false
+        "formeId": "094"
       },
       {
         "name": "Tauros",
-        "formeId": "128",
-        "isMeta": false
+        "formeId": "128"
       },
       {
         "name": "Espeon",
-        "formeId": "196",
-        "isMeta": false
+        "formeId": "196"
       },
       {
         "name": "Froslass",
-        "formeId": "478",
-        "isMeta": false
+        "formeId": "478"
       },
       {
         "name": "Zoroark-Hisui",
-        "formeId": "571-h",
-        "isMeta": false
+        "formeId": "571-h"
       },
       {
         "name": "Lycanroc-Dusk",
-        "formeId": "745-d",
-        "isMeta": false
+        "formeId": "745-d"
       }
     ]
   },
@@ -419,13 +359,11 @@
     "pokemon": [
       {
         "name": "Ninetales-Alola",
-        "formeId": "038-a",
-        "isMeta": false
+        "formeId": "038-a"
       },
       {
         "name": "Heliolisk",
-        "formeId": "695",
-        "isMeta": false
+        "formeId": "695"
       }
     ]
   },
@@ -434,8 +372,7 @@
     "pokemon": [
       {
         "name": "Infernape",
-        "formeId": "392",
-        "isMeta": false
+        "formeId": "392"
       }
     ]
   },
@@ -444,13 +381,11 @@
     "pokemon": [
       {
         "name": "Liepard",
-        "formeId": "510",
-        "isMeta": false
+        "formeId": "510"
       },
       {
         "name": "Pyroar",
-        "formeId": "668",
-        "isMeta": false
+        "formeId": "668"
       }
     ]
   },
@@ -459,38 +394,31 @@
     "pokemon": [
       {
         "name": "Pinsir-Mega",
-        "formeId": "127-m",
-        "isMeta": false
+        "formeId": "127-m"
       },
       {
         "name": "Sharpedo-Mega",
-        "formeId": "319-m",
-        "isMeta": false
+        "formeId": "319-m"
       },
       {
         "name": "Manectric",
-        "formeId": "310",
-        "isMeta": false
+        "formeId": "310"
       },
       {
         "name": "Lopunny",
-        "formeId": "428",
-        "isMeta": false
+        "formeId": "428"
       },
       {
         "name": "Zoroark",
-        "formeId": "571",
-        "isMeta": false
+        "formeId": "571"
       },
       {
         "name": "Pawmot",
-        "formeId": "923",
-        "isMeta": false
+        "formeId": "923"
       },
       {
         "name": "Espathra",
-        "formeId": "956",
-        "isMeta": false
+        "formeId": "956"
       }
     ]
   },
@@ -499,13 +427,11 @@
     "pokemon": [
       {
         "name": "Delphox",
-        "formeId": "655",
-        "isMeta": false
+        "formeId": "655"
       },
       {
         "name": "Meowstic",
-        "formeId": "678",
-        "isMeta": false
+        "formeId": "678"
       }
     ]
   },
@@ -514,13 +440,11 @@
     "pokemon": [
       {
         "name": "Excadrill-Mega",
-        "formeId": "530-m",
-        "isMeta": false
+        "formeId": "530-m"
       },
       {
         "name": "Emolga",
-        "formeId": "587",
-        "isMeta": false
+        "formeId": "587"
       }
     ]
   },
@@ -529,18 +453,15 @@
     "pokemon": [
       {
         "name": "Floette-Mega",
-        "formeId": "670-m",
-        "isMeta": false
+        "formeId": "670-m"
       },
       {
         "name": "Garchomp",
-        "formeId": "445",
-        "isMeta": false
+        "formeId": "445"
       },
       {
         "name": "Furfrou",
-        "formeId": "676",
-        "isMeta": false
+        "formeId": "676"
       }
     ]
   },
@@ -549,33 +470,27 @@
     "pokemon": [
       {
         "name": "Glimmora-Mega",
-        "formeId": "970-m",
-        "isMeta": false
+        "formeId": "970-m"
       },
       {
         "name": "Pidgeot",
-        "formeId": "018",
-        "isMeta": false
+        "formeId": "018"
       },
       {
         "name": "Simisage",
-        "formeId": "512",
-        "isMeta": false
+        "formeId": "512"
       },
       {
         "name": "Simisear",
-        "formeId": "514",
-        "isMeta": false
+        "formeId": "514"
       },
       {
         "name": "Simipour",
-        "formeId": "516",
-        "isMeta": false
+        "formeId": "516"
       },
       {
         "name": "Dedenne",
-        "formeId": "702",
-        "isMeta": false
+        "formeId": "702"
       }
     ]
   },
@@ -584,98 +499,79 @@
     "pokemon": [
       {
         "name": "Charizard-Mega-X",
-        "formeId": "006-mx",
-        "isMeta": false
+        "formeId": "006-mx"
       },
       {
         "name": "Charizard-Mega-Y",
-        "formeId": "006-my",
-        "isMeta": false
+        "formeId": "006-my"
       },
       {
         "name": "Kangaskhan-Mega",
-        "formeId": "115-m",
-        "isMeta": false
+        "formeId": "115-m"
       },
       {
         "name": "Dragonite-Mega",
-        "formeId": "149-m",
-        "isMeta": false
+        "formeId": "149-m"
       },
       {
         "name": "Blaziken-Mega",
-        "formeId": "257-m",
-        "isMeta": false
+        "formeId": "257-m"
       },
       {
         "name": "Gardevoir-Mega",
-        "formeId": "282-m",
-        "isMeta": false
+        "formeId": "282-m"
       },
       {
         "name": "Medicham-Mega",
-        "formeId": "308-m",
-        "isMeta": false
+        "formeId": "308-m"
       },
       {
         "name": "Glalie-Mega",
-        "formeId": "362-m",
-        "isMeta": false
+        "formeId": "362-m"
       },
       {
         "name": "Falinks-Mega",
-        "formeId": "870-m",
-        "isMeta": false
+        "formeId": "870-m"
       },
       {
         "name": "Charizard",
-        "formeId": "006",
-        "isMeta": false
+        "formeId": "006"
       },
       {
         "name": "Ninetales",
-        "formeId": "038",
-        "isMeta": false
+        "formeId": "038"
       },
       {
         "name": "Tauros-Paldea-Aqua",
-        "formeId": "128-a",
-        "isMeta": false
+        "formeId": "128-a"
       },
       {
         "name": "Tauros-Paldea-Blaze",
-        "formeId": "128-b",
-        "isMeta": false
+        "formeId": "128-b"
       },
       {
         "name": "Tauros-Paldea-Combat",
-        "formeId": "128-p",
-        "isMeta": false
+        "formeId": "128-p"
       },
       {
         "name": "Typhlosion",
-        "formeId": "157",
-        "isMeta": false
+        "formeId": "157"
       },
       {
         "name": "Salamence",
-        "formeId": "373",
-        "isMeta": false
+        "formeId": "373"
       },
       {
         "name": "Staraptor",
-        "formeId": "398",
-        "isMeta": false
+        "formeId": "398"
       },
       {
         "name": "Volcarona",
-        "formeId": "637",
-        "isMeta": false
+        "formeId": "637"
       },
       {
         "name": "Palafin",
-        "formeId": "964",
-        "isMeta": false
+        "formeId": "964"
       }
     ]
   },
@@ -684,8 +580,7 @@
     "pokemon": [
       {
         "name": "Gourgeist-Small",
-        "formeId": "711-s",
-        "isMeta": false
+        "formeId": "711-s"
       }
     ]
   },
@@ -694,8 +589,7 @@
     "pokemon": [
       {
         "name": "Hydreigon",
-        "formeId": "635",
-        "isMeta": false
+        "formeId": "635"
       }
     ]
   },
@@ -704,8 +598,7 @@
     "pokemon": [
       {
         "name": "Morpeko",
-        "formeId": "877",
-        "isMeta": false
+        "formeId": "877"
       }
     ]
   },
@@ -714,8 +607,7 @@
     "pokemon": [
       {
         "name": "Mimikyu",
-        "formeId": "778",
-        "isMeta": false
+        "formeId": "778"
       }
     ]
   },
@@ -724,38 +616,31 @@
     "pokemon": [
       {
         "name": "Arcanine",
-        "formeId": "059",
-        "isMeta": false
+        "formeId": "059"
       },
       {
         "name": "Typhlosion-Hisui",
-        "formeId": "157-h",
-        "isMeta": false
+        "formeId": "157-h"
       },
       {
         "name": "Houndoom",
-        "formeId": "229",
-        "isMeta": false
+        "formeId": "229"
       },
       {
         "name": "Sharpedo",
-        "formeId": "319",
-        "isMeta": false
+        "formeId": "319"
       },
       {
         "name": "Leafeon",
-        "formeId": "470",
-        "isMeta": false
+        "formeId": "470"
       },
       {
         "name": "Gliscor",
-        "formeId": "472",
-        "isMeta": false
+        "formeId": "472"
       },
       {
         "name": "Indeedee",
-        "formeId": "876",
-        "isMeta": false
+        "formeId": "876"
       }
     ]
   },
@@ -764,8 +649,7 @@
     "pokemon": [
       {
         "name": "Tinkaton",
-        "formeId": "959",
-        "isMeta": false
+        "formeId": "959"
       }
     ]
   },
@@ -774,23 +658,19 @@
     "pokemon": [
       {
         "name": "Garchomp-Mega",
-        "formeId": "445-m",
-        "isMeta": false
+        "formeId": "445-m"
       },
       {
         "name": "Krookodile",
-        "formeId": "553",
-        "isMeta": false
+        "formeId": "553"
       },
       {
         "name": "Floette-Eternal",
-        "formeId": "670-e",
-        "isMeta": false
+        "formeId": "670-e"
       },
       {
         "name": "Squawkabilly",
-        "formeId": "931",
-        "isMeta": false
+        "formeId": "931"
       }
     ]
   },
@@ -799,8 +679,7 @@
     "pokemon": [
       {
         "name": "Rotom",
-        "formeId": "479",
-        "isMeta": false
+        "formeId": "479"
       }
     ]
   },
@@ -809,48 +688,39 @@
     "pokemon": [
       {
         "name": "Chandelure-Mega",
-        "formeId": "609-m",
-        "isMeta": false
+        "formeId": "609-m"
       },
       {
         "name": "Pikachu",
-        "formeId": "025",
-        "isMeta": false
+        "formeId": "025"
       },
       {
         "name": "Arcanine-Hisui",
-        "formeId": "059-h",
-        "isMeta": false
+        "formeId": "059-h"
       },
       {
         "name": "Kangaskhan",
-        "formeId": "115",
-        "isMeta": false
+        "formeId": "115"
       },
       {
         "name": "Mr. Mime",
-        "formeId": "122",
-        "isMeta": false
+        "formeId": "122"
       },
       {
         "name": "Roserade",
-        "formeId": "407",
-        "isMeta": false
+        "formeId": "407"
       },
       {
         "name": "Lucario",
-        "formeId": "448",
-        "isMeta": false
+        "formeId": "448"
       },
       {
         "name": "Thievul",
-        "formeId": "828",
-        "isMeta": false
+        "formeId": "828"
       },
       {
         "name": "Annihilape",
-        "formeId": "979",
-        "isMeta": false
+        "formeId": "979"
       }
     ]
   },
@@ -859,8 +729,7 @@
     "pokemon": [
       {
         "name": "Vivillon",
-        "formeId": "666",
-        "isMeta": false
+        "formeId": "666"
       }
     ]
   },
@@ -869,18 +738,15 @@
     "pokemon": [
       {
         "name": "Malamar-Mega",
-        "formeId": "687-m",
-        "isMeta": false
+        "formeId": "687-m"
       },
       {
         "name": "Barbaracle-Mega",
-        "formeId": "689-m",
-        "isMeta": false
+        "formeId": "689-m"
       },
       {
         "name": "Excadrill",
-        "formeId": "530",
-        "isMeta": false
+        "formeId": "530"
       }
     ]
   },
@@ -889,13 +755,11 @@
     "pokemon": [
       {
         "name": "Baxcalibur-Mega",
-        "formeId": "998-m",
-        "isMeta": false
+        "formeId": "998-m"
       },
       {
         "name": "Baxcalibur",
-        "formeId": "998",
-        "isMeta": false
+        "formeId": "998"
       }
     ]
   },
@@ -904,33 +768,27 @@
     "pokemon": [
       {
         "name": "Rotom-Frost",
-        "formeId": "479-f",
-        "isMeta": false
+        "formeId": "479-f"
       },
       {
         "name": "Rotom-Heat",
-        "formeId": "479-h",
-        "isMeta": false
+        "formeId": "479-h"
       },
       {
         "name": "Rotom-Mow",
-        "formeId": "479-m",
-        "isMeta": false
+        "formeId": "479-m"
       },
       {
         "name": "Rotom-Fan",
-        "formeId": "479-s",
-        "isMeta": false
+        "formeId": "479-s"
       },
       {
         "name": "Rotom-Wash",
-        "formeId": "479-w",
-        "isMeta": false
+        "formeId": "479-w"
       },
       {
         "name": "Glimmora",
-        "formeId": "970",
-        "isMeta": false
+        "formeId": "970"
       }
     ]
   },
@@ -939,73 +797,59 @@
     "pokemon": [
       {
         "name": "Pinsir",
-        "formeId": "127",
-        "isMeta": false
+        "formeId": "127"
       },
       {
         "name": "Qwilfish",
-        "formeId": "211",
-        "isMeta": false
+        "formeId": "211"
       },
       {
         "name": "Heracross",
-        "formeId": "214",
-        "isMeta": false
+        "formeId": "214"
       },
       {
         "name": "Toxicroak",
-        "formeId": "454",
-        "isMeta": false
+        "formeId": "454"
       },
       {
         "name": "Samurott-Hisui",
-        "formeId": "503-h",
-        "isMeta": false
+        "formeId": "503-h"
       },
       {
         "name": "Kommo-o",
-        "formeId": "784",
-        "isMeta": false
+        "formeId": "784"
       },
       {
         "name": "Rillaboom",
-        "formeId": "812",
-        "isMeta": false
+        "formeId": "812"
       },
       {
         "name": "Indeedee-F",
-        "formeId": "876-f",
-        "isMeta": false
+        "formeId": "876-f"
       },
       {
         "name": "Kleavor",
-        "formeId": "900",
-        "isMeta": false
+        "formeId": "900"
       },
       {
         "name": "Overqwil",
-        "formeId": "904",
-        "isMeta": false
+        "formeId": "904"
       },
       {
         "name": "Quaquaval",
-        "formeId": "914",
-        "isMeta": false
+        "formeId": "914"
       },
       {
         "name": "Ceruledge",
-        "formeId": "937",
-        "isMeta": false
+        "formeId": "937"
       },
       {
         "name": "Mabosstiff",
-        "formeId": "943",
-        "isMeta": false
+        "formeId": "943"
       },
       {
         "name": "Archaludon",
-        "formeId": "1018",
-        "isMeta": false
+        "formeId": "1018"
       }
     ]
   },
@@ -1014,13 +858,11 @@
     "pokemon": [
       {
         "name": "Gourgeist",
-        "formeId": "711",
-        "isMeta": false
+        "formeId": "711"
       },
       {
         "name": "Gholdengo",
-        "formeId": "1000",
-        "isMeta": false
+        "formeId": "1000"
       }
     ]
   },
@@ -1029,8 +871,7 @@
     "pokemon": [
       {
         "name": "Lycanroc-Midnight",
-        "formeId": "745-m",
-        "isMeta": false
+        "formeId": "745-m"
       }
     ]
   },
@@ -1039,18 +880,15 @@
     "pokemon": [
       {
         "name": "Gyarados-Mega",
-        "formeId": "130-m",
-        "isMeta": false
+        "formeId": "130-m"
       },
       {
         "name": "Gyarados",
-        "formeId": "130",
-        "isMeta": false
+        "formeId": "130"
       },
       {
         "name": "Milotic",
-        "formeId": "350",
-        "isMeta": false
+        "formeId": "350"
       }
     ]
   },
@@ -1059,93 +897,75 @@
     "pokemon": [
       {
         "name": "Venusaur-Mega",
-        "formeId": "003-m",
-        "isMeta": false
+        "formeId": "003-m"
       },
       {
         "name": "Meganium-Mega",
-        "formeId": "154-m",
-        "isMeta": false
+        "formeId": "154-m"
       },
       {
         "name": "Altaria-Mega",
-        "formeId": "334-m",
-        "isMeta": false
+        "formeId": "334-m"
       },
       {
         "name": "Eelektross-Mega",
-        "formeId": "604-m",
-        "isMeta": false
+        "formeId": "604-m"
       },
       {
         "name": "Venusaur",
-        "formeId": "003",
-        "isMeta": false
+        "formeId": "003"
       },
       {
         "name": "Arbok",
-        "formeId": "024",
-        "isMeta": false
+        "formeId": "024"
       },
       {
         "name": "Dragonite",
-        "formeId": "149",
-        "isMeta": false
+        "formeId": "149"
       },
       {
         "name": "Meganium",
-        "formeId": "154",
-        "isMeta": false
+        "formeId": "154"
       },
       {
         "name": "Blaziken",
-        "formeId": "257",
-        "isMeta": false
+        "formeId": "257"
       },
       {
         "name": "Gardevoir",
-        "formeId": "282",
-        "isMeta": false
+        "formeId": "282"
       },
       {
         "name": "Medicham",
-        "formeId": "308",
-        "isMeta": false
+        "formeId": "308"
       },
       {
         "name": "Altaria",
-        "formeId": "334",
-        "isMeta": false
+        "formeId": "334"
       },
       {
         "name": "Glalie",
-        "formeId": "362",
-        "isMeta": false
+        "formeId": "362"
       },
       {
         "name": "Mamoswine",
-        "formeId": "473",
-        "isMeta": false
+        "formeId": "473"
       },
       {
         "name": "Gallade",
-        "formeId": "475",
-        "isMeta": false
+        "formeId": "475"
       },
       {
         "name": "Chandelure",
-        "formeId": "609",
-        "isMeta": false
+        "formeId": "609"
       },
       {
         "name": "Goodra",
-        "formeId": "706",
-        "isMeta": false
+        "formeId": "706"
       },
       {
         "name": "Passimian",
-        "formeId": "766",
-        "isMeta": false
+        "formeId": "766"
       }
     ]
   },
@@ -1154,8 +974,7 @@
     "pokemon": [
       {
         "name": "Vanilluxe",
-        "formeId": "584",
-        "isMeta": false
+        "formeId": "584"
       }
     ]
   },
@@ -1164,38 +983,31 @@
     "pokemon": [
       {
         "name": "Blastoise-Mega",
-        "formeId": "009-m",
-        "isMeta": false
+        "formeId": "009-m"
       },
       {
         "name": "Feraligatr-Mega",
-        "formeId": "160-m",
-        "isMeta": false
+        "formeId": "160-m"
       },
       {
         "name": "Blastoise",
-        "formeId": "009",
-        "isMeta": false
+        "formeId": "009"
       },
       {
         "name": "Feraligatr",
-        "formeId": "160",
-        "isMeta": false
+        "formeId": "160"
       },
       {
         "name": "Diggersby",
-        "formeId": "660",
-        "isMeta": false
+        "formeId": "660"
       },
       {
         "name": "Basculegion",
-        "formeId": "902",
-        "isMeta": false
+        "formeId": "902"
       },
       {
         "name": "Basculegion-F",
-        "formeId": "902-f",
-        "isMeta": false
+        "formeId": "902-f"
       }
     ]
   },
@@ -1204,8 +1016,7 @@
     "pokemon": [
       {
         "name": "Watchog",
-        "formeId": "505",
-        "isMeta": false
+        "formeId": "505"
       }
     ]
   },
@@ -1214,73 +1025,59 @@
     "pokemon": [
       {
         "name": "Scizor-Mega",
-        "formeId": "212-m",
-        "isMeta": false
+        "formeId": "212-m"
       },
       {
         "name": "Heracross-Mega",
-        "formeId": "214-m",
-        "isMeta": false
+        "formeId": "214-m"
       },
       {
         "name": "Banette-Mega",
-        "formeId": "354-m",
-        "isMeta": false
+        "formeId": "354-m"
       },
       {
         "name": "Emboar-Mega",
-        "formeId": "500-m",
-        "isMeta": false
+        "formeId": "500-m"
       },
       {
         "name": "Scovillain-Mega",
-        "formeId": "952-m",
-        "isMeta": false
+        "formeId": "952-m"
       },
       {
         "name": "Beedrill",
-        "formeId": "015",
-        "isMeta": false
+        "formeId": "015"
       },
       {
         "name": "Absol",
-        "formeId": "359",
-        "isMeta": false
+        "formeId": "359"
       },
       {
         "name": "Garbodor",
-        "formeId": "569",
-        "isMeta": false
+        "formeId": "569"
       },
       {
         "name": "Florges",
-        "formeId": "671",
-        "isMeta": false
+        "formeId": "671"
       },
       {
         "name": "Klefki",
-        "formeId": "707",
-        "isMeta": false
+        "formeId": "707"
       },
       {
         "name": "Toxtricity",
-        "formeId": "849",
-        "isMeta": false
+        "formeId": "849"
       },
       {
         "name": "Falinks",
-        "formeId": "870",
-        "isMeta": false
+        "formeId": "870"
       },
       {
         "name": "Armarouge",
-        "formeId": "936",
-        "isMeta": false
+        "formeId": "936"
       },
       {
         "name": "Scovillain",
-        "formeId": "952",
-        "isMeta": false
+        "formeId": "952"
       }
     ]
   },
@@ -1289,8 +1086,7 @@
     "pokemon": [
       {
         "name": "Malamar",
-        "formeId": "687",
-        "isMeta": false
+        "formeId": "687"
       }
     ]
   },
@@ -1299,13 +1095,11 @@
     "pokemon": [
       {
         "name": "Slurpuff",
-        "formeId": "685",
-        "isMeta": false
+        "formeId": "685"
       },
       {
         "name": "Tsareena",
-        "formeId": "763",
-        "isMeta": false
+        "formeId": "763"
       }
     ]
   },
@@ -1314,18 +1108,15 @@
     "pokemon": [
       {
         "name": "Tyranitar-Mega",
-        "formeId": "248-m",
-        "isMeta": false
+        "formeId": "248-m"
       },
       {
         "name": "Tyrantrum",
-        "formeId": "697",
-        "isMeta": false
+        "formeId": "697"
       },
       {
         "name": "Sandaconda",
-        "formeId": "844",
-        "isMeta": false
+        "formeId": "844"
       }
     ]
   },
@@ -1334,78 +1125,63 @@
     "pokemon": [
       {
         "name": "Clefable-Mega",
-        "formeId": "036-m",
-        "isMeta": false
+        "formeId": "036-m"
       },
       {
         "name": "Victreebel-Mega",
-        "formeId": "071-m",
-        "isMeta": false
+        "formeId": "071-m"
       },
       {
         "name": "Swampert-Mega",
-        "formeId": "260-m",
-        "isMeta": false
+        "formeId": "260-m"
       },
       {
         "name": "Victreebel",
-        "formeId": "071",
-        "isMeta": false
+        "formeId": "071"
       },
       {
         "name": "Politoed",
-        "formeId": "186",
-        "isMeta": false
+        "formeId": "186"
       },
       {
         "name": "Skarmory",
-        "formeId": "227",
-        "isMeta": false
+        "formeId": "227"
       },
       {
         "name": "Castform",
-        "formeId": "351",
-        "isMeta": false
+        "formeId": "351"
       },
       {
         "name": "Metagross",
-        "formeId": "376",
-        "isMeta": false
+        "formeId": "376"
       },
       {
         "name": "Luxray",
-        "formeId": "405",
-        "isMeta": false
+        "formeId": "405"
       },
       {
         "name": "Samurott",
-        "formeId": "503",
-        "isMeta": false
+        "formeId": "503"
       },
       {
         "name": "Decidueye",
-        "formeId": "724",
-        "isMeta": false
+        "formeId": "724"
       },
       {
         "name": "Flapple",
-        "formeId": "841",
-        "isMeta": false
+        "formeId": "841"
       },
       {
         "name": "Polteageist",
-        "formeId": "855",
-        "isMeta": false
+        "formeId": "855"
       },
       {
         "name": "Mr. Rime",
-        "formeId": "866",
-        "isMeta": false
+        "formeId": "866"
       },
       {
         "name": "Sinistcha",
-        "formeId": "1013",
-        "isMeta": false
+        "formeId": "1013"
       }
     ]
   },
@@ -1414,8 +1190,7 @@
     "pokemon": [
       {
         "name": "Gourgeist-Large",
-        "formeId": "711-l",
-        "isMeta": false
+        "formeId": "711-l"
       }
     ]
   },
@@ -1424,23 +1199,19 @@
     "pokemon": [
       {
         "name": "Scrafty-Mega",
-        "formeId": "560-m",
-        "isMeta": false
+        "formeId": "560-m"
       },
       {
         "name": "Gogoat",
-        "formeId": "673",
-        "isMeta": false
+        "formeId": "673"
       },
       {
         "name": "Barbaracle",
-        "formeId": "689",
-        "isMeta": false
+        "formeId": "689"
       },
       {
         "name": "Houndstone",
-        "formeId": "972",
-        "isMeta": false
+        "formeId": "972"
       }
     ]
   },
@@ -1449,8 +1220,7 @@
     "pokemon": [
       {
         "name": "Corviknight",
-        "formeId": "823",
-        "isMeta": false
+        "formeId": "823"
       }
     ]
   },
@@ -1459,8 +1229,7 @@
     "pokemon": [
       {
         "name": "Skeledirge",
-        "formeId": "911",
-        "isMeta": false
+        "formeId": "911"
       }
     ]
   },
@@ -1469,68 +1238,55 @@
     "pokemon": [
       {
         "name": "Chimecho-Mega",
-        "formeId": "358-m",
-        "isMeta": false
+        "formeId": "358-m"
       },
       {
         "name": "Vaporeon",
-        "formeId": "134",
-        "isMeta": false
+        "formeId": "134"
       },
       {
         "name": "Flareon",
-        "formeId": "136",
-        "isMeta": false
+        "formeId": "136"
       },
       {
         "name": "Umbreon",
-        "formeId": "197",
-        "isMeta": false
+        "formeId": "197"
       },
       {
         "name": "Scizor",
-        "formeId": "212",
-        "isMeta": false
+        "formeId": "212"
       },
       {
         "name": "Pelipper",
-        "formeId": "279",
-        "isMeta": false
+        "formeId": "279"
       },
       {
         "name": "Banette",
-        "formeId": "354",
-        "isMeta": false
+        "formeId": "354"
       },
       {
         "name": "Chimecho",
-        "formeId": "358",
-        "isMeta": false
+        "formeId": "358"
       },
       {
         "name": "Glaceon",
-        "formeId": "471",
-        "isMeta": false
+        "formeId": "471"
       },
       {
         "name": "Emboar",
-        "formeId": "500",
-        "isMeta": false
+        "formeId": "500"
       },
       {
         "name": "Sirfetch'd",
-        "formeId": "865",
-        "isMeta": false
+        "formeId": "865"
       },
       {
         "name": "Wyrdeer",
-        "formeId": "899",
-        "isMeta": false
+        "formeId": "899"
       },
       {
         "name": "Orthworm",
-        "formeId": "968",
-        "isMeta": false
+        "formeId": "968"
       }
     ]
   },
@@ -1539,13 +1295,11 @@
     "pokemon": [
       {
         "name": "Chesnaught",
-        "formeId": "652",
-        "isMeta": false
+        "formeId": "652"
       },
       {
         "name": "Alcremie",
-        "formeId": "869",
-        "isMeta": false
+        "formeId": "869"
       }
     ]
   },
@@ -1554,8 +1308,7 @@
     "pokemon": [
       {
         "name": "Scolipede-Mega",
-        "formeId": "545-m",
-        "isMeta": false
+        "formeId": "545-m"
       }
     ]
   },
@@ -1564,8 +1317,7 @@
     "pokemon": [
       {
         "name": "Tyranitar",
-        "formeId": "248",
-        "isMeta": false
+        "formeId": "248"
       }
     ]
   },
@@ -1574,78 +1326,63 @@
     "pokemon": [
       {
         "name": "Clefable",
-        "formeId": "036",
-        "isMeta": false
+        "formeId": "036"
       },
       {
         "name": "Farfetch'd",
-        "formeId": "083",
-        "isMeta": false
+        "formeId": "083"
       },
       {
         "name": "Swampert",
-        "formeId": "260",
-        "isMeta": false
+        "formeId": "260"
       },
       {
         "name": "Empoleon",
-        "formeId": "395",
-        "isMeta": false
+        "formeId": "395"
       },
       {
         "name": "Abomasnow",
-        "formeId": "460",
-        "isMeta": false
+        "formeId": "460"
       },
       {
         "name": "Aegislash",
-        "formeId": "681",
-        "isMeta": false
+        "formeId": "681"
       },
       {
         "name": "Sylveon",
-        "formeId": "700",
-        "isMeta": false
+        "formeId": "700"
       },
       {
         "name": "Goodra-Hisui",
-        "formeId": "706-h",
-        "isMeta": false
+        "formeId": "706-h"
       },
       {
         "name": "Decidueye-Hisui",
-        "formeId": "724-h",
-        "isMeta": false
+        "formeId": "724-h"
       },
       {
         "name": "Incineroar",
-        "formeId": "727",
-        "isMeta": false
+        "formeId": "727"
       },
       {
         "name": "Primarina",
-        "formeId": "730",
-        "isMeta": false
+        "formeId": "730"
       },
       {
         "name": "Toucannon",
-        "formeId": "733",
-        "isMeta": false
+        "formeId": "733"
       },
       {
         "name": "Oranguru",
-        "formeId": "765",
-        "isMeta": false
+        "formeId": "765"
       },
       {
         "name": "Grimmsnarl",
-        "formeId": "861",
-        "isMeta": false
+        "formeId": "861"
       },
       {
         "name": "Farigiraf",
-        "formeId": "981",
-        "isMeta": false
+        "formeId": "981"
       }
     ]
   },
@@ -1654,8 +1391,7 @@
     "pokemon": [
       {
         "name": "Clawitzer",
-        "formeId": "693",
-        "isMeta": false
+        "formeId": "693"
       }
     ]
   },
@@ -1664,23 +1400,19 @@
     "pokemon": [
       {
         "name": "Rampardos",
-        "formeId": "409",
-        "isMeta": false
+        "formeId": "409"
       },
       {
         "name": "Scrafty",
-        "formeId": "560",
-        "isMeta": false
+        "formeId": "560"
       },
       {
         "name": "Pangoro",
-        "formeId": "675",
-        "isMeta": false
+        "formeId": "675"
       },
       {
         "name": "Aurorus",
-        "formeId": "699",
-        "isMeta": false
+        "formeId": "699"
       }
     ]
   },
@@ -1689,13 +1421,11 @@
     "pokemon": [
       {
         "name": "Torterra",
-        "formeId": "389",
-        "isMeta": false
+        "formeId": "389"
       },
       {
         "name": "Trevenant",
-        "formeId": "709",
-        "isMeta": false
+        "formeId": "709"
       }
     ]
   },
@@ -1704,28 +1434,23 @@
     "pokemon": [
       {
         "name": "Golurk-Mega",
-        "formeId": "623-m",
-        "isMeta": false
+        "formeId": "623-m"
       },
       {
         "name": "Machamp",
-        "formeId": "068",
-        "isMeta": false
+        "formeId": "068"
       },
       {
         "name": "Ampharos",
-        "formeId": "181",
-        "isMeta": false
+        "formeId": "181"
       },
       {
         "name": "Swalot",
-        "formeId": "317",
-        "isMeta": false
+        "formeId": "317"
       },
       {
         "name": "Golurk",
-        "formeId": "623",
-        "isMeta": false
+        "formeId": "623"
       }
     ]
   },
@@ -1734,8 +1459,7 @@
     "pokemon": [
       {
         "name": "Gourgeist-Super",
-        "formeId": "711-h",
-        "isMeta": false
+        "formeId": "711-h"
       }
     ]
   },
@@ -1744,68 +1468,55 @@
     "pokemon": [
       {
         "name": "Mawile-Mega",
-        "formeId": "303-m",
-        "isMeta": false
+        "formeId": "303-m"
       },
       {
         "name": "Aggron-Mega",
-        "formeId": "306-m",
-        "isMeta": false
+        "formeId": "306-m"
       },
       {
         "name": "Audino-Mega",
-        "formeId": "531-m",
-        "isMeta": false
+        "formeId": "531-m"
       },
       {
         "name": "Vileplume",
-        "formeId": "045",
-        "isMeta": false
+        "formeId": "045"
       },
       {
         "name": "Azumarill",
-        "formeId": "184",
-        "isMeta": false
+        "formeId": "184"
       },
       {
         "name": "Sableye",
-        "formeId": "302",
-        "isMeta": false
+        "formeId": "302"
       },
       {
         "name": "Mawile",
-        "formeId": "303",
-        "isMeta": false
+        "formeId": "303"
       },
       {
         "name": "Aggron",
-        "formeId": "306",
-        "isMeta": false
+        "formeId": "306"
       },
       {
         "name": "Audino",
-        "formeId": "531",
-        "isMeta": false
+        "formeId": "531"
       },
       {
         "name": "Eelektross",
-        "formeId": "604",
-        "isMeta": false
+        "formeId": "604"
       },
       {
         "name": "Beartic",
-        "formeId": "614",
-        "isMeta": false
+        "formeId": "614"
       },
       {
         "name": "Perrserker",
-        "formeId": "863",
-        "isMeta": false
+        "formeId": "863"
       },
       {
         "name": "Kingambit",
-        "formeId": "983",
-        "isMeta": false
+        "formeId": "983"
       }
     ]
   },
@@ -1814,8 +1525,7 @@
     "pokemon": [
       {
         "name": "Ditto",
-        "formeId": "132",
-        "isMeta": false
+        "formeId": "132"
       }
     ]
   },
@@ -1824,8 +1534,7 @@
     "pokemon": [
       {
         "name": "Hippowdon",
-        "formeId": "450",
-        "isMeta": false
+        "formeId": "450"
       }
     ]
   },
@@ -1834,23 +1543,19 @@
     "pokemon": [
       {
         "name": "Ampharos-Mega",
-        "formeId": "181-m",
-        "isMeta": false
+        "formeId": "181-m"
       },
       {
         "name": "Wigglytuff",
-        "formeId": "040",
-        "isMeta": false
+        "formeId": "040"
       },
       {
         "name": "Conkeldurr",
-        "formeId": "534",
-        "isMeta": false
+        "formeId": "534"
       },
       {
         "name": "Bellibolt",
-        "formeId": "939",
-        "isMeta": false
+        "formeId": "939"
       }
     ]
   },
@@ -1859,23 +1564,19 @@
     "pokemon": [
       {
         "name": "Chesnaught-Mega",
-        "formeId": "652-m",
-        "isMeta": false
+        "formeId": "652-m"
       },
       {
         "name": "Dragalge-Mega",
-        "formeId": "691-m",
-        "isMeta": false
+        "formeId": "691-m"
       },
       {
         "name": "Dragalge",
-        "formeId": "691",
-        "isMeta": false
+        "formeId": "691"
       },
       {
         "name": "Hydrapple",
-        "formeId": "1019",
-        "isMeta": false
+        "formeId": "1019"
       }
     ]
   },
@@ -1884,8 +1585,7 @@
     "pokemon": [
       {
         "name": "Crabominable",
-        "formeId": "740",
-        "isMeta": false
+        "formeId": "740"
       }
     ]
   },
@@ -1894,13 +1594,11 @@
     "pokemon": [
       {
         "name": "Araquanid",
-        "formeId": "752",
-        "isMeta": false
+        "formeId": "752"
       },
       {
         "name": "Grapploct",
-        "formeId": "853",
-        "isMeta": false
+        "formeId": "853"
       }
     ]
   },
@@ -1909,33 +1607,27 @@
     "pokemon": [
       {
         "name": "Golisopod-Mega",
-        "formeId": "768-m",
-        "isMeta": false
+        "formeId": "768-m"
       },
       {
         "name": "Ariados",
-        "formeId": "168",
-        "isMeta": false
+        "formeId": "168"
       },
       {
         "name": "Forretress",
-        "formeId": "205",
-        "isMeta": false
+        "formeId": "205"
       },
       {
         "name": "Camerupt",
-        "formeId": "323",
-        "isMeta": false
+        "formeId": "323"
       },
       {
         "name": "Rhyperior",
-        "formeId": "464",
-        "isMeta": false
+        "formeId": "464"
       },
       {
         "name": "Golisopod",
-        "formeId": "768",
-        "isMeta": false
+        "formeId": "768"
       }
     ]
   },
@@ -1944,8 +1636,7 @@
     "pokemon": [
       {
         "name": "Arboliva",
-        "formeId": "930",
-        "isMeta": false
+        "formeId": "930"
       }
     ]
   },
@@ -1954,8 +1645,7 @@
     "pokemon": [
       {
         "name": "Avalugg-Hisui",
-        "formeId": "713-h",
-        "isMeta": false
+        "formeId": "713-h"
       }
     ]
   },
@@ -1964,13 +1654,11 @@
     "pokemon": [
       {
         "name": "Drampa-Mega",
-        "formeId": "780-m",
-        "isMeta": false
+        "formeId": "780-m"
       },
       {
         "name": "Drampa",
-        "formeId": "780",
-        "isMeta": false
+        "formeId": "780"
       }
     ]
   },
@@ -1979,23 +1667,19 @@
     "pokemon": [
       {
         "name": "Spiritomb",
-        "formeId": "442",
-        "isMeta": false
+        "formeId": "442"
       },
       {
         "name": "Toxapex",
-        "formeId": "748",
-        "isMeta": false
+        "formeId": "748"
       },
       {
         "name": "Mudsdale",
-        "formeId": "750",
-        "isMeta": false
+        "formeId": "750"
       },
       {
         "name": "Garganacl",
-        "formeId": "934",
-        "isMeta": false
+        "formeId": "934"
       }
     ]
   },
@@ -2004,8 +1688,7 @@
     "pokemon": [
       {
         "name": "Crabominable-Mega",
-        "formeId": "740-m",
-        "isMeta": false
+        "formeId": "740-m"
       }
     ]
   },
@@ -2014,13 +1697,11 @@
     "pokemon": [
       {
         "name": "Stunfisk",
-        "formeId": "618",
-        "isMeta": false
+        "formeId": "618"
       },
       {
         "name": "Stunfisk-Galar",
-        "formeId": "618-g",
-        "isMeta": false
+        "formeId": "618-g"
       }
     ]
   },
@@ -2029,73 +1710,59 @@
     "pokemon": [
       {
         "name": "Slowbro-Mega",
-        "formeId": "080-m",
-        "isMeta": false
+        "formeId": "080-m"
       },
       {
         "name": "Steelix-Mega",
-        "formeId": "208-m",
-        "isMeta": false
+        "formeId": "208-m"
       },
       {
         "name": "Abomasnow-Mega",
-        "formeId": "460-m",
-        "isMeta": false
+        "formeId": "460-m"
       },
       {
         "name": "Slowbro",
-        "formeId": "080",
-        "isMeta": false
+        "formeId": "080"
       },
       {
         "name": "Slowbro-Galar",
-        "formeId": "080-g",
-        "isMeta": false
+        "formeId": "080-g"
       },
       {
         "name": "Snorlax",
-        "formeId": "143",
-        "isMeta": false
+        "formeId": "143"
       },
       {
         "name": "Slowking",
-        "formeId": "199",
-        "isMeta": false
+        "formeId": "199"
       },
       {
         "name": "Slowking-Galar",
-        "formeId": "199-g",
-        "isMeta": false
+        "formeId": "199-g"
       },
       {
         "name": "Steelix",
-        "formeId": "208",
-        "isMeta": false
+        "formeId": "208"
       },
       {
         "name": "Bastiodon",
-        "formeId": "411",
-        "isMeta": false
+        "formeId": "411"
       },
       {
         "name": "Cofagrigus",
-        "formeId": "563",
-        "isMeta": false
+        "formeId": "563"
       },
       {
         "name": "Reuniclus",
-        "formeId": "579",
-        "isMeta": false
+        "formeId": "579"
       },
       {
         "name": "Appletun",
-        "formeId": "842",
-        "isMeta": false
+        "formeId": "842"
       },
       {
         "name": "Runerigus",
-        "formeId": "867",
-        "isMeta": false
+        "formeId": "867"
       }
     ]
   },
@@ -2104,18 +1771,15 @@
     "pokemon": [
       {
         "name": "Musharna",
-        "formeId": "518",
-        "isMeta": false
+        "formeId": "518"
       },
       {
         "name": "Aromatisse",
-        "formeId": "683",
-        "isMeta": false
+        "formeId": "683"
       },
       {
         "name": "Hatterene",
-        "formeId": "858",
-        "isMeta": false
+        "formeId": "858"
       }
     ]
   },
@@ -2124,8 +1788,7 @@
     "pokemon": [
       {
         "name": "Avalugg",
-        "formeId": "713",
-        "isMeta": false
+        "formeId": "713"
       }
     ]
   },
@@ -2134,18 +1797,15 @@
     "pokemon": [
       {
         "name": "Sableye-Mega",
-        "formeId": "302-m",
-        "isMeta": false
+        "formeId": "302-m"
       },
       {
         "name": "Camerupt-Mega",
-        "formeId": "323-m",
-        "isMeta": false
+        "formeId": "323-m"
       },
       {
         "name": "Torkoal",
-        "formeId": "324",
-        "isMeta": false
+        "formeId": "324"
       }
     ]
   },
@@ -2154,8 +1814,7 @@
     "pokemon": [
       {
         "name": "Pincurchin",
-        "formeId": "871",
-        "isMeta": false
+        "formeId": "871"
       }
     ]
   }
