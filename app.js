@@ -141,8 +141,12 @@
     const data = effectivePokemon(mon);
     return `<div class="slot-icon">${data ? iconMarkup(data.formeId, data.name) : ""}</div>`;
   };
+  const hasMegaToggle = (mon) => {
+    const data = findPokemon(mon.name);
+    return Boolean(data && isMegaName(data.name));
+  };
   const megaToggle = (mon, i, side) => {
-    if (!findPokemon(mon.name) || !isMegaName(mon.name)) return "";
+    if (!hasMegaToggle(mon)) return "";
     return `<button class="mega-option mega-check" type="button" aria-label="Use Mega form for ${side === "user" ? "your" : "opposing"} Pokémon ${i + 1}" aria-pressed="${mon.mega !== false ? "true" : "false"}" data-side="${side}" data-index="${i}" title="Mega" ${slotDisabled(mon)}><img src="img/items/Mega.webp" alt="Mega"></button>`;
   };
   const modifierControls = (mon, i, side) => `
@@ -159,7 +163,7 @@
       .map(
         (mon, i) => `
       <div class="slot user-slot ${mon.selected ? "" : "inactive"}">
-        <div class="slot-primary">
+        <div class="slot-primary ${hasMegaToggle(mon) ? "has-mega" : ""}">
           <div class="active-check" title="Include this Pokémon in the ranking"><input class="user-active" type="checkbox" aria-label="Include your Pokémon ${i + 1}" data-index="${i}" ${mon.selected ? "checked" : ""}></div>
           <div class="search-wrap"><input class="search-input user-search" type="text" autocomplete="off" placeholder="Search Pokémon…" aria-label="Your Pokémon ${i + 1}" data-index="${i}" value="${escapeHtml(mon.name)}" ${slotDisabled(mon)}><div class="suggestions" data-suggestions="user-${i}"></div></div>
           <input class="ev-input" type="number" min="0" step="1" placeholder="EV" aria-label="Your Pokémon ${i + 1} EV" data-index="${i}" value="${mon.ev}" ${slotDisabled(mon)}>
@@ -176,7 +180,7 @@
       .map(
         (mon, i) => `
       <div class="slot opponent-slot ${mon.selected ? "" : "inactive"}">
-        <div class="slot-primary">
+        <div class="slot-primary ${hasMegaToggle(mon) ? "has-mega" : ""}">
           <div class="active-check" title="Include this Pokémon in the ranking"><input class="opponent-active" type="checkbox" aria-label="Include opposing Pokémon ${i + 1}" data-index="${i}" ${mon.selected ? "checked" : ""}></div>
           <div class="search-wrap"><input class="search-input opponent-search" type="text" autocomplete="off" placeholder="Search Pokémon…" aria-label="Opposing Pokémon ${i + 1}" data-index="${i}" value="${escapeHtml(mon.name)}" ${slotDisabled(mon)}><div class="suggestions" data-suggestions="opponent-${i}"></div></div>
           <div class="confirm-options" aria-label="Confirmed opposing speed scenario">

@@ -210,9 +210,12 @@ h2 {
 .user-slot {
   --slot-columns: 26px minmax(180px, 1.5fr) minmax(62px, 0.38fr)
     minmax(96px, 0.5fr) auto;
+  --slot-columns-no-mega: 26px minmax(180px, 1.5fr) minmax(62px, 0.38fr)
+    minmax(96px, 0.5fr);
 }
 .opponent-slot {
   --slot-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr) auto;
+  --slot-columns-no-mega: 26px minmax(0, 1fr) minmax(140px, 0.8fr);
 }
 .slot-primary,
 .slot-secondary {
@@ -224,6 +227,13 @@ h2 {
 .slot-secondary {
   grid-template-columns: 26px 34px minmax(0, 1fr) minmax(0, 1fr) auto;
   padding-left: 0;
+}
+.slot-primary:not(.has-mega) {
+  grid-template-columns: 26px minmax(180px, 1.5fr) minmax(62px, 0.38fr)
+    minmax(96px, 0.5fr);
+}
+.opponent-slot .slot-primary:not(.has-mega) {
+  grid-template-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr);
 }
 .slot.inactive {
   opacity: 0.48;
@@ -589,10 +599,15 @@ h2 {
   .user-slot,
   .opponent-slot {
     --slot-columns: 22px minmax(0, 1fr) auto;
+    --slot-columns-no-mega: 22px minmax(0, 1fr) auto;
   }
   .slot-primary,
   .slot-secondary {
     grid-template-columns: var(--slot-columns);
+  }
+  .user-slot .slot-primary:not(.has-mega),
+  .opponent-slot .slot-primary:not(.has-mega) {
+    grid-template-columns: 22px minmax(0, 1fr) auto;
   }
   .slot-secondary {
     padding-left: 0;
