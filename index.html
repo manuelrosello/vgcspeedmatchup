@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VGC Speed Matchup</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">LIVE BATTLE TOOL</p>
+          <h1>VGC Speed Matchup</h1>
+          <p class="subtitle">Compare your team with six opposing Pokémon</p>
+        </div>
+        <div id="data-status" class="status loading">Loading Pokémon data…</div>
+      </header>
+
+      <section class="teams-grid" aria-label="Teams">
+        <article class="team-card user-card">
+          <div class="card-heading">
+            <div>
+              <p class="team-kicker">Your team</p>
+              <h2>Build your team</h2>
+            </div>
+            <div class="heading-actions">
+              <button
+                id="select-all-user"
+                class="button button-ghost"
+                type="button"
+              >
+                Select all</button
+              ><button id="save-user" class="button button-ghost" type="button">
+                Save team</button
+              ><button
+                id="clear-user"
+                class="button button-ghost"
+                type="button"
+              >
+                Clear team
+              </button>
+            </div>
+          </div>
+          <label class="toggle-row"
+            ><input id="user-tailwind" type="checkbox" /><span
+              class="toggle"
+            ></span
+            ><span>Tailwind <small>×2 team speed</small></span></label
+          >
+          <div id="user-slots" class="slot-list"></div>
+        </article>
+
+        <article class="team-card opponent-card">
+          <div class="card-heading">
+            <div>
+              <p class="team-kicker">Opposing team</p>
+              <h2>Search the Pokédex</h2>
+            </div>
+            <button
+              id="clear-opponents"
+              class="button button-ghost"
+              type="button"
+            >
+              Clear team
+            </button>
+          </div>
+          <label class="toggle-row"
+            ><input id="opponent-tailwind" type="checkbox" /><span
+              class="toggle"
+            ></span
+            ><span>Tailwind <small>×2 team speed</small></span></label
+          >
+          <div id="opponent-slots" class="slot-list"></div>
+        </article>
+      </section>
+
+      <section class="ranking-card">
+        <div class="ranking-heading">
+          <div>
+            <p class="team-kicker">Live result</p>
+            <h2>Speed order</h2>
+          </div>
+          <label class="toggle-row trick-room-row"
+            ><input id="trick-room" type="checkbox" /><span
+              class="toggle"
+            ></span
+            ><span>Trick Room</span></label
+          >
+          <div id="ranking-count" class="count-pill">0 entries</div>
+        </div>
+        <div id="ranking-empty" class="empty-state">
+          Add at least one Pokémon to see the ranking.
+        </div>
+        <ol id="ranking-list" class="ranking-list"></ol>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
