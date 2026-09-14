@@ -123,6 +123,17 @@ h2 {
   flex-wrap: wrap;
   justify-content: end;
 }
+.card-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.card-toggles .toggle-row {
+  margin-bottom: 0;
+}
 .button {
   border: 1px solid var(--line);
   color: var(--text);

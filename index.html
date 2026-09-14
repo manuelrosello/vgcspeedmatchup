@@ -15,7 +15,9 @@
           <h1>VGC Live Speed</h1>
           <p class="subtitle">Compare your team with six opposing Pokémon</p>
         </div>
-        <div id="data-status" class="status loading">Loading Pokémon data…</div>
+        <div id="data-status" class="status loading">
+          Loading Pokémon data…
+        </div>
       </header>
 
       <section class="teams-grid" aria-label="Teams">
@@ -32,8 +34,6 @@
                 type="button"
               >
                 Activate all</button
-              ><button id="save-user" class="button button-ghost" type="button">
-                Save team</button
               ><button
                 id="clear-user"
                 class="button button-ghost"
@@ -43,12 +43,20 @@
               </button>
             </div>
           </div>
-          <label class="toggle-row"
-            ><input id="user-tailwind" type="checkbox" /><span
-              class="toggle"
-            ></span
-            ><span>Tailwind</span></label
-          >
+          <div class="card-toggles">
+            <label class="toggle-row"
+              ><input id="user-tailwind" type="checkbox" /><span
+                class="toggle"
+              ></span
+              ><span>Tailwind</span></label
+            >
+            <label class="toggle-row"
+              ><input id="autosave" type="checkbox" checked /><span
+                class="toggle"
+              ></span
+              ><span>Auto-Save</span></label
+            >
+          </div>
           <div id="user-slots" class="slot-list"></div>
         </article>
 

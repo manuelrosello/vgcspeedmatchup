@@ -25,8 +25,13 @@
     trickRoom: false,
   };
   let savedTeam = null;
+  let autosaveEnabled = true;
   try {
     savedTeam = localStorage.getItem("pokemon-speed-ranking-team");
+    const savedAutosave = localStorage.getItem(
+      "pokemon-speed-ranking-autosave",
+    );
+    if (savedAutosave !== null) autosaveEnabled = savedAutosave === "true";
   } catch (_) {
     /* Storage may be unavailable in restricted browser modes. */
   }
@@ -40,6 +45,7 @@
     }
   }
   const $ = (id) => document.getElementById(id);
+  $("autosave").checked = autosaveEnabled;
   const escapeHtml = (value) =>
     String(value).replace(
       /[&<>'"]/g,
@@ -290,6 +296,23 @@
       )
       .join("");
   }
+  function persistTeam() {
+    if (!$("autosave").checked) return;
+    try {
+      localStorage.setItem(
+        "pokemon-speed-ranking-team",
+        JSON.stringify(state.user),
+      );
+    } catch (_) {}
+  }
+  function persistAutosavePreference() {
+    try {
+      localStorage.setItem(
+        "pokemon-speed-ranking-autosave",
+        String($("autosave").checked),
+      );
+    } catch (_) {}
+  }
   function update() {
     renderUserSlots();
     renderOpponentSlots();
@@ -313,10 +336,12 @@
         target.value,
       );
       renderRanking();
+      if (side === "user") persistTeam();
     }
     if (target.matches(".ev-input")) {
       state.user[target.dataset.index].ev = target.value;
       renderRanking();
+      persistTeam();
     }
   });
   document.addEventListener("change", (event) => {
@@ -325,6 +350,7 @@
       state.user[target.dataset.index].selected = target.checked;
       renderUserSlots();
       renderRanking();
+      persistTeam();
     }
     if (target.matches(".opponent-active")) {
       state.opponents[target.dataset.index].selected = target.checked;
@@ -334,6 +360,7 @@
     if (target.matches(".alignment-input")) {
       state.user[target.dataset.index].alignment = target.value;
       renderRanking();
+      persistTeam();
     }
     if (target.matches(".modifier-input, .ability-input")) {
       const team =
@@ -343,6 +370,7 @@
         : "abilityMultiplier";
       team[target.dataset.index][key] = target.value;
       renderRanking();
+      if (target.dataset.side === "user") persistTeam();
     }
     if (target.matches(".scenario-check")) {
       const selected = state.opponents[target.dataset.index].selectedScenarios;
@@ -368,6 +396,7 @@
       renderRanking();
       renderUserSlots();
       renderOpponentSlots();
+      if (megaToggle.dataset.side === "user") persistTeam();
       return;
     }
     const scarfToggle = event.target.closest(".scarf-check");
@@ -382,6 +411,7 @@
         team[scarfToggle.dataset.index].scarf ? "true" : "false",
       );
       renderRanking();
+      if (scarfToggle.classList.contains("user-scarf")) persistTeam();
       return;
     }
     const pick = event.target.closest("[data-pick]");
@@ -389,12 +419,14 @@
       const side = pick.dataset.side === "user" ? "user" : "opponents";
       setSearchValue(side, pick.dataset.index, pick.dataset.pick);
       update();
+      if (side === "user") persistTeam();
       return;
     }
     const clearUser = event.target.closest("[data-clear-user]");
     if (clearUser) {
       state.user[clearUser.dataset.clearUser] = blankUser();
       update();
+      persistTeam();
       return;
     }
     const clearOpponent = event.target.closest("[data-clear-opponent]");
@@ -411,32 +443,22 @@
   $("clear-user").addEventListener("click", () => {
     state.user = Array(6).fill(null).map(blankUser);
     update();
-  });
-  $("save-user").addEventListener("click", () => {
-    try {
-      localStorage.setItem(
-        "pokemon-speed-ranking-team",
-        JSON.stringify(state.user),
-      );
-    } catch (_) {
-      return;
-    }
-    const button = $("save-user");
-    const original = button.textContent;
-    button.textContent = "Saved";
-    setTimeout(() => {
-      button.textContent = original;
-    }, 1200);
+    persistTeam();
   });
   $("select-all-user").addEventListener("click", () => {
     state.user.forEach((mon) => {
       mon.selected = true;
     });
     update();
+    persistTeam();
   });
   $("clear-opponents").addEventListener("click", () => {
     state.opponents = Array(6).fill(null).map(blankOpponent);
     update();
+  });
+  $("autosave").addEventListener("change", () => {
+    persistAutosavePreference();
+    if ($("autosave").checked) persistTeam();
   });
   $("user-tailwind").addEventListener("change", (e) => {
     state.userTailwind = e.target.checked;
