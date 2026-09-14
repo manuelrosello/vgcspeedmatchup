@@ -4,8 +4,9 @@
     ev: "",
     alignment: "1",
     selected: true,
+    scarf: false,
   });
-  const blankOpponent = () => ({ name: "", selectedScenarios: ["32", "32+"] });
+  const blankOpponent = () => ({ name: "", selected: true, scarf: false, selectedScenarios: ["32", "32+"] });
   const state = {
     pokemon: [],
     user: Array(6).fill(null).map(blankUser),
@@ -66,6 +67,7 @@
         <div class="search-wrap"><input class="search-input user-search" type="text" autocomplete="off" placeholder="Search Pokémon…" aria-label="Your Pokémon ${i + 1}" data-index="${i}" value="${escapeHtml(mon.name)}"><div class="suggestions" data-suggestions="user-${i}"></div></div>
         <input class="ev-input" type="number" min="0" step="1" placeholder="EV" aria-label="Your Pokémon ${i + 1} EV" data-index="${i}" value="${mon.ev}">
         <select class="alignment-input" aria-label="Your Pokémon ${i + 1} alignment" data-index="${i}">${alignmentOptions(mon.alignment)}</select>
+        <label class="scarf-option"><input class="scarf-check user-scarf" type="checkbox" aria-label="Choice Scarf for your Pokémon ${i + 1}" data-index="${i}" ${mon.scarf ? "checked" : ""}><span>Scarf</span></label>
         <button class="button button-danger" type="button" data-clear-user="${i}" aria-label="Clear your Pokémon ${i + 1}">Clear</button>
       </div>`,
       )
@@ -75,8 +77,8 @@
     $("opponent-slots").innerHTML = state.opponents
       .map(
         (mon, i) => `
-      <div class="slot opponent-slot">
-        <span class="slot-number">${i + 1}</span>
+      <div class="slot opponent-slot ${mon.selected ? "" : "inactive"}">
+        <div class="active-check" title="Include this Pokémon in the ranking"><input class="opponent-active" type="checkbox" aria-label="Include opposing Pokémon ${i + 1}" data-index="${i}" ${mon.selected ? "checked" : ""}><span></span></div>
         <div class="search-wrap"><input class="search-input opponent-search" type="text" autocomplete="off" placeholder="Search Pokémon…" aria-label="Opposing Pokémon ${i + 1}" data-index="${i}" value="${escapeHtml(mon.name)}"><div class="suggestions" data-suggestions="opponent-${i}"></div></div>
         <div class="confirm-options" aria-label="Confirmed opposing speed scenario">
           ${[
@@ -91,6 +93,7 @@
             )
             .join("")}
         </div>
+        <label class="scarf-option"><input class="scarf-check opponent-scarf" type="checkbox" aria-label="Choice Scarf for opposing Pokémon ${i + 1}" data-index="${i}" ${mon.scarf ? "checked" : ""}><span>Scarf</span></label>
         <button class="button button-danger" type="button" data-clear-opponent="${i}" aria-label="Clear opposing Pokémon ${i + 1}">Clear</button>
       </div>`,
       )
@@ -112,15 +115,18 @@
   function addEntry(entries, name, speed, side, meta, base, formeId) {
     entries.push({ name, speed, side, meta, base, formeId });
   }
+  function applySpeedModifiers(rawSpeed, scarf, tailwind) {
+    if (scarf && tailwind) return Math.floor(rawSpeed * 3); // Matches 87 -> 130 -> 261.
+    const scarfSpeed = scarf ? Math.floor(rawSpeed * 1.5) : rawSpeed;
+    return tailwind ? scarfSpeed * 2 : scarfSpeed;
+  }
   function renderRanking() {
     const entries = [];
     const userMultiplier = state.userTailwind ? 2 : 1;
     state.user.forEach((mon, i) => {
       const data = findPokemon(mon.name);
       if (!data || !mon.selected || mon.ev === "") return;
-      const speed =
-        Math.floor((data.base + Number(mon.ev) + 20) * Number(mon.alignment)) *
-        userMultiplier;
+      const speed = applySpeedModifiers(Math.floor((data.base + Number(mon.ev) + 20) * Number(mon.alignment)), mon.scarf, state.userTailwind);
       addEntry(
         entries,
         data.name,
@@ -134,7 +140,7 @@
     const opponentMultiplier = state.opponentTailwind ? 2 : 1;
     state.opponents.forEach((mon) => {
       const data = findPokemon(mon.name);
-      if (!data) return;
+      if (!data || !mon.selected) return;
       const scenarios = {
         "0-": [0, 0.9],
         0: [0, 1],
@@ -147,7 +153,7 @@
         addEntry(
           entries,
           data.name,
-          Math.floor((data.base + ev + 20) * alignment) * opponentMultiplier,
+          applySpeedModifiers(Math.floor((data.base + ev + 20) * alignment), mon.scarf, state.opponentTailwind),
           "opponent",
           `${label} EV${label.endsWith("+") ? " · positive" : label.endsWith("-") ? " · negative" : " · neutral"}`,
           data.base,
@@ -201,6 +207,16 @@
     if (target.matches(".user-active")) {
       state.user[target.dataset.index].selected = target.checked;
       target.closest(".slot").classList.toggle("inactive", !target.checked);
+      renderRanking();
+    }
+    if (target.matches(".opponent-active")) {
+      state.opponents[target.dataset.index].selected = target.checked;
+      target.closest(".slot").classList.toggle("inactive", !target.checked);
+      renderRanking();
+    }
+    if (target.matches(".scarf-check")) {
+      const team = target.classList.contains("user-scarf") ? state.user : state.opponents;
+      team[target.dataset.index].scarf = target.checked;
       renderRanking();
     }
     if (target.matches(".alignment-input")) {

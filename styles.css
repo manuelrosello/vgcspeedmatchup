@@ -198,8 +198,11 @@ h2 {
   align-items: center;
   gap: 9px;
 }
+.user-slot {
+  grid-template-columns: 26px minmax(0, 1fr) minmax(70px, 0.42fr) minmax(125px, 0.7fr) 72px auto;
+}
 .opponent-slot {
-  grid-template-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr) auto;
+  grid-template-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr) 72px auto;
 }
 .slot.inactive {
   opacity: 0.48;
@@ -242,6 +245,22 @@ h2 {
   border-radius: 9px;
   padding: 10px 8px;
   outline: none;
+}
+.scarf-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.scarf-option input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: var(--accent);
 }
 .slot input:focus {
   border-color: var(--accent);
@@ -353,16 +372,41 @@ h2 {
 .site-footer {
   margin: 28px auto 0;
   max-width: 850px;
+  padding: 18px 20px 20px;
   color: var(--muted);
   text-align: center;
   font-size: 0.72rem;
   line-height: 1.6;
+  border-top: 1px solid var(--line);
 }
 .site-footer p {
-  margin-bottom: 6px;
+  max-width: 760px;
+  margin: 0 auto 14px;
 }
-.site-footer a {
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 11px;
   color: var(--accent);
+  background: #202a4a;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: 0.15s ease;
+}
+.footer-links a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: #2a3761;
+  transform: translateY(-1px);
 }
 .ranking-item {
   display: grid;
@@ -456,15 +500,17 @@ h2 {
     grid-template-columns: 22px minmax(0, 1fr) auto;
   }
   .user-slot .ev-input,
-  .user-slot .alignment-input {
+  .user-slot .alignment-input,
+  .user-slot .scarf-option,
+  .opponent-slot .confirm-options,
+  .opponent-slot .scarf-option {
     grid-column: 2 / 3;
   }
   .slot .button-danger {
     grid-column: 3;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 4;
   }
   .opponent-slot .confirm-options {
-    grid-column: 2 / 3;
     justify-content: start;
   }
 }

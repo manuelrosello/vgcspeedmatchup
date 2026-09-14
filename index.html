@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VGC Speed Matchup</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>VGC Live Speed</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -12,7 +12,7 @@
       <header class="hero">
         <div>
           <p class="eyebrow">LIVE BATTLE TOOL</p>
-          <h1>VGC Speed Matchup</h1>
+          <h1>VGC Live Speed</h1>
           <p class="subtitle">Compare your team with six opposing Pokémon</p>
         </div>
         <div id="data-status" class="status loading">Loading Pokémon data…</div>
@@ -47,7 +47,7 @@
             ><input id="user-tailwind" type="checkbox" /><span
               class="toggle"
             ></span
-            ><span>Tailwind <small>×2 team speed</small></span></label
+            ><span>Tailwind</span></label
           >
           <div id="user-slots" class="slot-list"></div>
         </article>
@@ -70,7 +70,7 @@
             ><input id="opponent-tailwind" type="checkbox" /><span
               class="toggle"
             ></span
-            ><span>Tailwind <small>×2 team speed</small></span></label
+            ><span>Tailwind</span></label
           >
           <div id="opponent-slots" class="slot-list"></div>
         </article>
@@ -101,13 +101,11 @@
           Nintendo / Game Freak / The Pokémon Company. This is a fan-made tool
           with no affiliation with or endorsement by Nintendo.
         </p>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <br />
-        <a
-          target="_blank"
-          href="https://github.com/manuelrosello/vgcspeedmatchup"
-          >Source Code</a
-        >
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="/privacy-policy">ℹ️ Privacy Policy</a>
+          <a target="_blank" rel="noreferrer" href="https://github.com/manuelrosello/vgcspeedmatchup">👾 Source Code</a>
+          <a target="_blank" rel="noreferrer" href="https://ko-fi.com/manuelrosello">☕️ Buy Me a Coffee</a>
+        </nav>
       </footer>
     </main>
     <script src="app.js"></script>
