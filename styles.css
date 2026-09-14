@@ -188,21 +188,42 @@ h2 {
 }
 .slot-list {
   display: grid;
-  gap: 9px;
+  gap: 0;
 }
 .slot {
+  position: relative;
   display: grid;
-  grid-template-columns:
-    26px minmax(0, 1fr) minmax(70px, 0.42fr) minmax(125px, 0.7fr)
-    auto;
+  gap: 6px;
+  padding: 9px 0 11px;
+}
+.slot:first-child {
+  padding-top: 0;
+}
+.slot:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  left: 10px;
+  border-bottom: 1px solid #202b4b;
+}
+.user-slot {
+  --slot-columns: 26px minmax(180px, 1.5fr) minmax(62px, 0.38fr)
+    minmax(96px, 0.5fr);
+}
+.opponent-slot {
+  --slot-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr);
+}
+.slot-primary,
+.slot-secondary {
+  display: grid;
+  grid-template-columns: var(--slot-columns);
   align-items: center;
   gap: 9px;
 }
-.user-slot {
-  grid-template-columns: 26px minmax(180px, 1.5fr) minmax(62px, 0.38fr) minmax(96px, 0.5fr) 72px auto;
-}
-.opponent-slot {
-  grid-template-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr) 72px auto;
+.slot-secondary {
+  grid-template-columns: 34px minmax(0, 1fr) minmax(0, 1fr) auto;
+  padding-left: 35px;
 }
 .slot.inactive {
   opacity: 0.48;
@@ -250,17 +271,31 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  width: 34px;
+  height: 32px;
+  padding: 7px 8px;
   color: var(--muted);
-  font-size: 0.72rem;
-  white-space: nowrap;
+  background: #0f1528;
+  border: 1px solid var(--line);
+  border-radius: 7px;
   cursor: pointer;
+  transition: 0.15s ease;
 }
-.scarf-option input {
-  width: 15px;
-  height: 15px;
-  margin: 0;
-  accent-color: var(--accent);
+.scarf-option:hover {
+  border-color: var(--accent);
+}
+.scarf-option[aria-pressed="true"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: #26345f;
+}
+.scarf-option img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.scarf-option:disabled {
+  cursor: not-allowed;
 }
 .slot input:focus {
   border-color: var(--accent);
@@ -268,6 +303,17 @@ h2 {
 }
 .slot select:focus {
   border-color: var(--accent);
+}
+.select-control {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+.select-control select {
+  flex: 1;
 }
 .speed-input {
   appearance: textfield;
@@ -497,20 +543,28 @@ h2 {
 @media (max-width: 560px) {
   .user-slot,
   .opponent-slot {
-    grid-template-columns: 22px minmax(0, 1fr) auto;
+    --slot-columns: 22px minmax(0, 1fr) auto;
   }
-  .user-slot .ev-input,
-  .user-slot .alignment-input,
-  .user-slot .scarf-option,
-  .opponent-slot .confirm-options,
-  .opponent-slot .scarf-option {
-    grid-column: 2 / 3;
+  .slot-primary,
+  .slot-secondary {
+    grid-template-columns: var(--slot-columns);
   }
-  .slot .button-danger {
-    grid-column: 3;
-    grid-row: 1 / span 4;
+  .slot-secondary {
+    padding-left: 27px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  }
+  .slot-secondary .scarf-option {
+    grid-column: 1 / -1;
+    justify-content: start;
+  }
+  .select-control {
+    display: block;
+  }
+  .select-control select {
+    margin-top: 4px;
   }
   .opponent-slot .confirm-options {
     justify-content: start;
+    grid-column: 2 / 3;
   }
 }
