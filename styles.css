@@ -604,29 +604,55 @@ h2 {
     --slot-columns: 22px minmax(0, 1fr) auto;
     --slot-columns-no-mega: 22px minmax(0, 1fr) auto;
   }
-  .slot-primary,
-  .slot-secondary {
-    grid-template-columns: var(--slot-columns);
-  }
-  .user-slot .slot-primary:not(.has-mega),
-  .opponent-slot .slot-primary:not(.has-mega) {
+  .user-slot .slot-primary,
+  .user-slot .slot-primary:not(.has-mega) {
     grid-template-columns: 22px minmax(0, 1fr) auto;
+  }
+  .user-slot .slot-primary .search-wrap {
+    grid-column: 2 / -1;
+  }
+  .user-slot .slot-primary .ev-input {
+    grid-column: 2;
+  }
+  .user-slot .slot-primary .alignment-input,
+  .user-slot .slot-primary .mega-option {
+    grid-column: 3;
+  }
+  .opponent-slot .slot-primary,
+  .opponent-slot .slot-primary:not(.has-mega) {
+    grid-template-columns: 22px minmax(0, 1fr);
+  }
+  .opponent-slot .slot-primary .search-wrap,
+  .opponent-slot .slot-primary .confirm-options,
+  .opponent-slot .slot-primary .mega-option {
+    grid-column: 2;
   }
   .slot-secondary {
     padding-left: 0;
-    grid-template-columns: 26px minmax(0, 1fr) minmax(0, 1fr) auto;
+    grid-template-columns: 26px 34px minmax(0, 1fr);
+  }
+  .slot-secondary .slot-icon {
+    grid-column: 1;
+    grid-row: 1;
   }
   .slot-secondary .scarf-option {
-    grid-column: auto;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .slot-secondary .button-danger {
+    grid-column: 3;
+    grid-row: 1;
   }
   .select-control {
-    display: block;
+    display: grid;
+    grid-column: 2 / -1;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
   }
   .select-control select {
-    margin-top: 4px;
+    margin-top: 0;
   }
   .opponent-slot .confirm-options {
-    justify-content: start;
-    grid-column: 2 / 3;
+    justify-content: space-between;
   }
 }
