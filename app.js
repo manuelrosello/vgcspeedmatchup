@@ -84,13 +84,13 @@
     ({ 2: "x2", 1.5: "x1.5", 0.5: "x0.5", 1: "--" })[String(value)] || "--";
   const modifierChainLabel = (mon, tailwind) => {
     const parts = [];
-    if (mon.scarf) parts.push("Scarf");
+    if (mon.scarf) parts.push("scarf");
     if (Number(mon.modifier || 1) !== 1)
       parts.push(modifierLabel(Number(mon.modifier)));
     if (Number(mon.abilityMultiplier || 1) !== 1)
-      parts.push(`Ability ${abilityLabel(Number(mon.abilityMultiplier))}`);
-    if (tailwind) parts.push("Tailwind");
-    return parts.length ? parts.join(" · ") : "No modifiers";
+      parts.push(`ability ${abilityLabel(Number(mon.abilityMultiplier))}`);
+    if (tailwind) parts.push("tailwind");
+    return parts.length ? parts.join(" | ") : "no modifiers";
   };
   const iconUrl = (formeId) => `img/icons/${encodeURIComponent(formeId)}.png`;
   const iconMarkup = (formeId, name) =>
@@ -245,7 +245,7 @@
         data.name,
         speed,
         "user",
-        `${mon.ev} EV · ${alignmentLabel(mon.alignment)} · ${modifierChainLabel(mon, state.userTailwind)}`,
+        `${mon.ev} EV | ${alignmentLabel(mon.alignment)} | ${modifierChainLabel(mon, state.userTailwind)}`,
         data.base,
         data.formeId,
       );
@@ -271,7 +271,7 @@
             state.opponentTailwind,
           ),
           "opponent",
-          `${label} EV${label.endsWith("+") ? " · positive" : label.endsWith("-") ? " · negative" : " · neutral"} · ${modifierChainLabel(mon, state.opponentTailwind)}`,
+          `${label} EV${label.endsWith("+") ? " | positive" : label.endsWith("-") ? " | negative" : " | neutral"} | ${modifierChainLabel(mon, state.opponentTailwind)}`,
           data.base,
           data.formeId,
         );
@@ -286,7 +286,7 @@
     $("ranking-list").innerHTML = entries
       .map(
         (entry, i) =>
-          `<li class="ranking-item ${entry.side}"><span class="rank">${i + 1}</span>${iconMarkup(entry.formeId, entry.name)}<span><span class="mon-name">${escapeHtml(entry.name)}</span><span class="mon-meta"> · ${entry.meta} · base ${entry.base}</span></span><span class="speed-value">${entry.speed}</span><span class="tag ${entry.side}">${entry.side === "user" ? "You" : "Opponent"}</span></li>`,
+          `<li class="ranking-item ${entry.side}"><span class="rank">${i + 1}</span>${iconMarkup(entry.formeId, entry.name)}<span><span class="mon-name">${escapeHtml(entry.name)}</span><span class="mon-meta"><br/>${entry.meta} | base ${entry.base}</span></span><span class="speed-value">${entry.speed}</span><span class="tag ${entry.side}">${entry.side === "user" ? "You" : "Opponent"}</span></li>`,
       )
       .join("");
   }
