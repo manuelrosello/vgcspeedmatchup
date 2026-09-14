@@ -88,7 +88,7 @@
     if (Number(mon.modifier || 1) !== 1)
       parts.push(modifierLabel(Number(mon.modifier)));
     if (Number(mon.abilityMultiplier || 1) !== 1)
-      parts.push(`ability ${abilityLabel(Number(mon.abilityMultiplier))}`);
+      parts.push(`${abilityLabel(Number(mon.abilityMultiplier))}`);
     if (tailwind) parts.push("tailwind");
     return parts.length ? parts.join(" | ") : "no modifiers";
   };
@@ -245,7 +245,7 @@
         data.name,
         speed,
         "user",
-        `${mon.ev} EV | ${alignmentLabel(mon.alignment)} | ${modifierChainLabel(mon, state.userTailwind)}`,
+        `${mon.ev}${mon.alignment == "1.1" ? "+" : mon.alignment == "0.9" ? "-" : ""} | ${modifierChainLabel(mon, state.userTailwind)}`,
         data.base,
         data.formeId,
       );
@@ -271,7 +271,7 @@
             state.opponentTailwind,
           ),
           "opponent",
-          `${label} EV${label.endsWith("+") ? " | positive" : label.endsWith("-") ? " | negative" : " | neutral"} | ${modifierChainLabel(mon, state.opponentTailwind)}`,
+          `${label} | ${modifierChainLabel(mon, state.opponentTailwind)}`,
           data.base,
           data.formeId,
         );
