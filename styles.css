@@ -192,10 +192,9 @@ h2 {
 }
 .slot {
   display: grid;
-  grid-template-columns: 26px minmax(0, 1fr) minmax(70px, 0.42fr) minmax(
-      125px,
-      0.7fr
-    ) auto;
+  grid-template-columns:
+    26px minmax(0, 1fr) minmax(70px, 0.42fr) minmax(125px, 0.7fr)
+    auto;
   align-items: center;
   gap: 9px;
 }
@@ -350,6 +349,20 @@ h2 {
   padding: 0;
   display: grid;
   gap: 7px;
+}
+.site-footer {
+  margin: 28px auto 0;
+  max-width: 850px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+.site-footer p {
+  margin-bottom: 6px;
+}
+.site-footer a {
+  color: var(--accent);
 }
 .ranking-item {
   display: grid;
