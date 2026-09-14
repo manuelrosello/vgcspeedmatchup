@@ -199,7 +199,7 @@ h2 {
   gap: 9px;
 }
 .user-slot {
-  grid-template-columns: 26px minmax(0, 1fr) minmax(70px, 0.42fr) minmax(125px, 0.7fr) 72px auto;
+  grid-template-columns: 26px minmax(180px, 1.5fr) minmax(62px, 0.38fr) minmax(96px, 0.5fr) 72px auto;
 }
 .opponent-slot {
   grid-template-columns: 26px minmax(0, 1fr) minmax(140px, 0.8fr) 72px auto;

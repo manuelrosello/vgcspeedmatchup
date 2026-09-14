@@ -6,7 +6,12 @@
     selected: true,
     scarf: false,
   });
-  const blankOpponent = () => ({ name: "", selected: true, scarf: false, selectedScenarios: ["32", "32+"] });
+  const blankOpponent = () => ({
+    name: "",
+    selected: true,
+    scarf: false,
+    selectedScenarios: ["32", "32+"],
+  });
   const state = {
     pokemon: [],
     user: Array(6).fill(null).map(blankUser),
@@ -107,7 +112,7 @@
     box.innerHTML = matches
       .map(
         (p) =>
-          `<div class="suggestion" data-pick="${escapeHtml(p.name)}" data-side="${side}" data-index="${index}">${iconMarkup(p.formeId, p.name)}${escapeHtml(p.name)} <span>base ${p.base}</span></div>`,
+          `<div class="suggestion" data-pick="${escapeHtml(p.name)}" data-side="${side}" data-index="${index}">${iconMarkup(p.formeId, p.name)}${escapeHtml(p.name)}</div>`,
       )
       .join("");
     box.classList.toggle("open", query.length > 0 && matches.length > 0);
@@ -126,7 +131,11 @@
     state.user.forEach((mon, i) => {
       const data = findPokemon(mon.name);
       if (!data || !mon.selected || mon.ev === "") return;
-      const speed = applySpeedModifiers(Math.floor((data.base + Number(mon.ev) + 20) * Number(mon.alignment)), mon.scarf, state.userTailwind);
+      const speed = applySpeedModifiers(
+        Math.floor((data.base + Number(mon.ev) + 20) * Number(mon.alignment)),
+        mon.scarf,
+        state.userTailwind,
+      );
       addEntry(
         entries,
         data.name,
@@ -153,7 +162,11 @@
         addEntry(
           entries,
           data.name,
-          applySpeedModifiers(Math.floor((data.base + ev + 20) * alignment), mon.scarf, state.opponentTailwind),
+          applySpeedModifiers(
+            Math.floor((data.base + ev + 20) * alignment),
+            mon.scarf,
+            state.opponentTailwind,
+          ),
           "opponent",
           `${label} EV${label.endsWith("+") ? " · positive" : label.endsWith("-") ? " · negative" : " · neutral"}`,
           data.base,
@@ -215,7 +228,9 @@
       renderRanking();
     }
     if (target.matches(".scarf-check")) {
-      const team = target.classList.contains("user-scarf") ? state.user : state.opponents;
+      const team = target.classList.contains("user-scarf")
+        ? state.user
+        : state.opponents;
       team[target.dataset.index].scarf = target.checked;
       renderRanking();
     }
